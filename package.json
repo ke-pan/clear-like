@@ -1,0 +1,38 @@
+{
+  "name": "clear-like",
+  "version": "0.0.1",
+  "description": "clear like project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ke-pan/clear-like.git"
+  },
+  "keywords": [
+    "Clear",
+    "React",
+    "Redux"
+  ],
+  "author": "ke-pan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ke-pan/clear-like/issues"
+  },
+  "homepage": "https://github.com/ke-pan/clear-like#readme",
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.29",
+    "babel-loader": "^5.3.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
