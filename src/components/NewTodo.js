@@ -1,0 +1,37 @@
+import React from 'react'
+const ENTER_CODE = 13
+
+export default class NewTodo extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {value: ''}
+    
+    this.handleChange = this.handleChange.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
+  }
+  handleChange(e) {
+    this.setState({
+      value: e.target.value
+    })
+  }
+  handleKeyDown(e) {
+    if (e.keyCode === ENTER_CODE) {
+      this.props.onAddTodo(this.state.value) 
+    }
+  }
+  render() {
+    return <div>
+      <input 
+        type='text' 
+        placeholder='What do you want to do?'
+        value={this.state.value}
+        onChange={this.handleChange}
+        onKeyDown={this.handleKeyDown}
+      />
+    </div>
+  }
+}
+
+NewTodo.propTypes = {
+  onAddTodo: React.PropTypes.func.isRequired
+}
