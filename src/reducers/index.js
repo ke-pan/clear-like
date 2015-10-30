@@ -9,6 +9,7 @@ function findIndexById(state, id) {
 const initialState = Immutable.List()
 
 export default function todosReducer (state = initialState, action) {
+  let index, todo
   switch (action.type) {
   case ADD:
     return state.push({
@@ -18,8 +19,8 @@ export default function todosReducer (state = initialState, action) {
     })
     
   case UPDATE:
-    const index = findIndexById(state, action.id)
-    const todo = state[index]
+    index = findIndexById(state, action.id)
+    todo = state[index]
     return state.splice(index, 1, {
       id: todo.id,
       text: action.text,
@@ -27,12 +28,12 @@ export default function todosReducer (state = initialState, action) {
     })
     
   case DELETE:
-    const index = findIndexById(state, action.id)
+    index = findIndexById(state, action.id)
     return state.delete(index)
     
   case COMPLETE:
-    const index = findIndexById(state, action.id)
-    const todo = state[index]
+    index = findIndexById(state, action.id)
+    todo = state[index]
     return state.splice(index, 1, {
       id: todo.id,
       completed: !todo.completed

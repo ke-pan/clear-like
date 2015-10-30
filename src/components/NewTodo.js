@@ -17,6 +17,7 @@ export default class NewTodo extends React.Component {
   handleKeyDown(e) {
     if (e.keyCode === ENTER_CODE) {
       this.props.onAddTodo(this.state.value) 
+      this.setState({value: ''})
     }
   }
   render() {
