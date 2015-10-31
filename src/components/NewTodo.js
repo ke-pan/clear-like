@@ -21,10 +21,10 @@ export default class NewTodo extends React.Component {
     }
   }
   render() {
-    return <div>
+    return <div id='new-todo'>
       <input 
         type='text' 
-        placeholder='What do you want to do?'
+        placeholder='New Todo'
         value={this.state.value}
         onChange={this.handleChange}
         onKeyDown={this.handleKeyDown}

@@ -8,7 +8,7 @@ import TodoList from '../components/TodoList'
 class App extends React.Component {
   render() {
     const { todos, actions } = this.props;
-    return <div>
+    return <div id='app'>
       <NewTodo onAddTodo={actions.addTodo}/>
       <TodoList todos={todos} />
     </div>
